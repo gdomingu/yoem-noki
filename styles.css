@@ -1,3 +1,6 @@
+.text-center{
+  text-align: center;
+}
 .container{
   display: grid;
   justify-content: center;
@@ -16,7 +19,7 @@
   justify-content: center;
   align-items: center;
   left: 50%;
-  top: 5%;
+  top: 3%;
   transform: translate(-50%,50%);
 }
 button{
