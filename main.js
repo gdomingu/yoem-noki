@@ -2,8 +2,8 @@ var circle = document.querySelector(".container");
 var container = document.querySelector(".fullContainer");
 
 var colors = {
- "siiki/sikili": "red", 
- "teweli/tewei": "blue",
+ "siiki / sikili": "red", 
+ "teweli / tewei": "blue",
  "husai": "brown",
  "sawa hewei": "orange",
  "sikhewei": "pink",
