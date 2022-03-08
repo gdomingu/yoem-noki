@@ -14,13 +14,14 @@
   font-family: Font Awesome\ 5 Free;
 }
 .fullContainer{
-  display: grid;
-  position: absolute;
+  display: flex;
   justify-content: center;
   align-items: center;
-  left: 50%;
-  top: 3%;
-  transform: translate(-50%,50%);
+}
+.colContainer{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 button{
   margin-top: 30px;
@@ -48,5 +49,17 @@ span{
 }
 .colorName{
   text-align: center;
-  height: 50px;
+  margin-right: 10px;
+}
+
+.inline-flex{
+  display: inline-flex
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.hidden{
+  display: none;
 }

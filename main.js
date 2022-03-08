@@ -1,5 +1,7 @@
 var circle = document.querySelector(".container");
+var genButton = document.querySelector(".genButton");
 var container = document.querySelector(".fullContainer");
+var answer = document.querySelector(".answer");
 
 var colors = {
  "siiki / sikili": "red", 
@@ -25,15 +27,23 @@ function randomColorGen(name){
   }
 }
 function genColor(){
-  circle.onclick = function(){
-    var yaqui_name = randomColorGen(circleColorName.innerHTML)
-    
+  let yaqui_name;
+  genButton.onclick = function(){
+    circleColorName.innerHTML = '';
+    yaqui_name = randomColorGen(circleColorName.innerHTML)
+    circleColorName.innerHTML = yaqui_name.replaceAll(/[A-Za-z]/g, "_ ");
+    answer.classList.remove("hidden")
     circle.classList.add("anim");
-
-    circleColorName.innerHTML = yaqui_name;
     circle.style.backgroundColor = colors[yaqui_name];
     setTimeout(() => circle.classList.remove("anim"),1000);
    }
+
+  answer.onclick = function(){
+    if (yaqui_name) {
+      circleColorName.innerHTML = yaqui_name;
+      answer.classList.add("hidden")
+    }
+  }
  }
 genColor()
 
