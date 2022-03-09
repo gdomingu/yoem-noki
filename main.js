@@ -73,7 +73,7 @@ function initAnimals(title){
     answer.classList.remove("hidden")
     circle.classList.add("anim");
     circle.style.backgroundImage = `url('${animals[yaqui_name]}')`;
-    circle.style.backgroundSize = "contain";
+    circle.style.backgroundSize = "cover";
     setTimeout(() => circle.classList.remove("anim"),1000);
    }
 
