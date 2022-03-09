@@ -63,3 +63,7 @@ span{
 .hidden{
   display: none;
 }
+
+.navContainer{
+  position: absolute;
+}
