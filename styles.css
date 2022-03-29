@@ -67,3 +67,7 @@ span{
 .navContainer{
   position: absolute;
 }
+
+.answer{
+  margin-left: 10px;
+}
