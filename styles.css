@@ -1,5 +1,23 @@
+body:before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url("https://editions.lib.umn.edu/openrivers/wp-content/uploads/sites/9/2017/10/Cattle_crossing_the_river_Rio_Yaqui__Mexico__ca.1900_CHS-1508.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 .text-center{
   text-align: center;
+}
+ul {
+  list-style-type: none;
 }
 .container{
   display: grid;
@@ -70,4 +88,26 @@ span{
 
 .answer{
   margin-left: 10px;
+}
+
+@media only screen and (max-device-width: 600px) {
+  .navContainer {
+    display: none;
+  }
+  .mobileNavContainer {
+    display: block;
+  }
+}
+
+@media only screen and (min-device-width: 601px) {
+  .navContainer {
+    display: block;
+  }
+  .mobileNavContainer {
+    display: none;
+  }
+}
+
+.mobileNavContainer ul {
+  padding: 0;
 }
