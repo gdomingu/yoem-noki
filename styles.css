@@ -16,6 +16,9 @@ body:before{
 .text-center{
   text-align: center;
 }
+.answerText {
+  white-space: pre;
+}
 ul {
   list-style-type: none;
 }

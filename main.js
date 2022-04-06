@@ -131,6 +131,7 @@ let answerText = document.querySelector(".answerText");
 let shuffledArray = []
 let currentPosition = 0
 function shuffleArray(array){
+  currentPosition = 0
   shuffledArray = array.sort((a, b) => 0.5 - Math.random());
 }
 
@@ -142,7 +143,9 @@ function initColor(title){
     answerText.innerHTML = '';
     let currentColor = shuffledArray[currentPosition]
     yaqui_name = currentColor.name
-    answerText.innerHTML = yaqui_name.replaceAll(/[A-Za-z]/g, "_ ");
+    let replacement = yaqui_name.replaceAll(/\s/g, "    ").replaceAll(/[A-Za-z]/g, "_ ");
+    console.log(replacement)
+    answerText.innerHTML = replacement
     answer.classList.remove("hidden")
     circle.classList.add("anim");
     circle.style.backgroundColor = currentColor.answer;
