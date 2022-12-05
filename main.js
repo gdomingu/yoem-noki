@@ -9,7 +9,10 @@ var container = document.querySelector(".fullContainer");
 var answer = document.querySelector(".answer");
 var navSelectors = document.querySelectorAll(".navSelector");
 navSelectors.forEach((navSelector) => {
-  navSelector.onclick = () => startQuiz(navSelector);
+  navSelector.onclick = (e) => {
+    e.preventDefault();
+    startQuiz(navSelector);
+  };
 });
 
 const startQuiz = (navSelector) => {
