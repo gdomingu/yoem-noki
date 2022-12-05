@@ -24,4 +24,14 @@ export const shapes = [
     url: "https://us.123rf.com/450wm/cgdeaw/cgdeaw1904/cgdeaw190400338/121202493-red-rectangle-basic-simple-shapes-isolated-on-white-background-geometric-rectangle-icon-2d-shape-sym.jpg?ver=6",
     answer: "rectangle",
   },
+  {
+    name: "choki",
+    url: "https://illustoon.com/photo/7414.png",
+    answer: "star",
+  },
+  {
+    name: "meecha",
+    url: "https://www.pngitem.com/pimgs/m/395-3956300_moon-icon-white-half-moon-shape-hd-png.png",
+    answer: "moon",
+  },
 ];
