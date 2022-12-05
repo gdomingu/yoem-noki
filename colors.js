@@ -1,42 +1,42 @@
 export const colors = [
   {
-    name: "siiki / sikili", 
+    name: "siiki / sikili",
     answer: "red",
   },
   {
-    name: "teweli / tewei", 
-    answer: "blue"
+    name: "teweli / tewei",
+    answer: "blue",
   },
   {
-    name: "husai", 
-    answer: "saddlebrown"
+    name: "husai",
+    answer: "saddlebrown",
   },
   {
-    name: "sawa hewei", 
-    answer: "orange"
+    name: "sawa hewei",
+    answer: "orange",
   },
   {
-    name: "sikhewei", 
-    answer: "pink"
+    name: "sikhewei",
+    answer: "pink",
   },
   {
-    name: "tosai", 
-    answer: "white"
+    name: "tosai",
+    answer: "white",
   },
   {
-    name: "sawai", 
-    answer: "yellow"
+    name: "sawai",
+    answer: "yellow",
   },
   {
-    name: "chukuli / chukui / chukuri", 
-    answer: "black"
+    name: "chukuli / chukui / chukuri",
+    answer: "black",
   },
   {
-    name: "siali / siari", 
-    answer: "green"
+    name: "siali / siari",
+    answer: "green",
   },
   {
-    name: "kut tewei", 
-    answer: "purple"
-  }
-]
+    name: "kut tewei",
+    answer: "purple",
+  },
+];

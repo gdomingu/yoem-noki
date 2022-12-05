@@ -7,21 +7,21 @@ export const shapes = [
   {
     name: "koelai",
     url: "http://www.clipartbest.com/cliparts/acq/o5K/acqo5K8zi.jpeg",
-    answer: "circle"
+    answer: "circle",
   },
   {
     name: "vahi chakariakame",
     url: "https://img.freepik.com/free-vector/neon-light-frame_53876-93482.jpg?size=338&ext=jpg&uid=P57244170",
-    answer: "triangle"
+    answer: "triangle",
   },
   {
     name: "naiki chakariakame",
     url: "https://thndl.com/images/5_2.jpg",
-    answer: "square"
+    answer: "square",
   },
   {
     name: "woi katana teeve",
     url: "https://us.123rf.com/450wm/cgdeaw/cgdeaw1904/cgdeaw190400338/121202493-red-rectangle-basic-simple-shapes-isolated-on-white-background-geometric-rectangle-icon-2d-shape-sym.jpg?ver=6",
-    answer: "rectangle"
-  }
-]
+    answer: "rectangle",
+  },
+];
