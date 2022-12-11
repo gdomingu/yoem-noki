@@ -1,6 +1,7 @@
 import { animals } from "./animals.js";
 import { colors } from "./colors.js";
 import { shapes } from "./shapes.js";
+import { numbers } from "./numbers.js";
 
 var circle = document.querySelector(".container");
 var genButton = document.querySelector(".genButton");
@@ -25,6 +26,9 @@ const startQuiz = (navSelector) => {
       break;
     case "ka_nananam":
       initQuiz(navSelector.text, shapes);
+      break;
+    case "hinaikiame":
+      initNumberQuiz(navSelector.text, numbers);
       break;
     default:
       console.log(`No quiz available.`);
@@ -69,6 +73,44 @@ function initColor(title) {
 
   genButton.onclick = () => {
     shuffleArray(colors);
+    promptQuestion();
+  };
+}
+
+function initNumberQuiz(title) {
+  document.querySelector(".title").innerHTML = title;
+  const shuffledArray = shuffleArray(numbers);
+  let yaqui_name;
+
+  const promptQuestion = () => {
+    answerText.innerHTML = "";
+    let currentQuestion = shuffledArray[currentPosition];
+    yaqui_name = currentQuestion.name;
+    let replacement = yaqui_name
+      .replaceAll(/\s/g, "    ")
+      .replaceAll(/[A-Za-z]/g, "_ ");
+    answerText.innerHTML = replacement;
+    answer.classList.remove("hidden");
+    circle.classList.add("anim");
+    circle.style.backgroundImage = "";
+    circle.style.backgroundColor = "black";
+    circle.style.color = "white";
+    circle.style.fontSize = "60px";
+    circle.innerHTML = currentQuestion.circleText
+    setTimeout(() => circle.classList.remove("anim"), 1000);
+  };
+
+  promptQuestion();
+
+  nextButton.onclick = () => handleNextClick(promptQuestion, shuffledArray);
+
+  answer.onclick = function () {
+    answerText.innerHTML = shuffledArray[currentPosition].name;
+    answer.classList.add("hidden");
+  };
+
+  genButton.onclick = () => {
+    shuffleArray(numbers);
     promptQuestion();
   };
 }

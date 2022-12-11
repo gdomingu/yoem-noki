@@ -183,4 +183,24 @@ export const animals = [
     name: "chiiva",
     url: "https://images.unsplash.com/photo-1559203544-e4b02d061343?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGdvYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
   },
+  {
+    name: "tori / toli",
+    url: "https://images.unsplash.com/photo-1624116518496-993146f67f4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmF0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    name: "mahau",
+    url: "https://images.unsplash.com/photo-1618763318486-aad9c7868019?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBvbmQlMjB0dXJ0bGV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    name: "woo'o",
+    url: "https://images.unsplash.com/photo-1635496471665-4e67e0e87399?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bW9zcXVpdG98ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    name: "ousei",
+    url: "https://images.unsplash.com/photo-1527720255604-b27935ade401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW4lMjBsaW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    name: "aakame",
+    url: "https://images.unsplash.com/photo-1596763950802-1d88da92758a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmF0dGxlc25ha2V8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+  },
 ];
