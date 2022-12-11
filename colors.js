@@ -1,11 +1,11 @@
 export const colors = [
   {
     name: "siiki / sikili",
-    answer: "red",
+    answer: "firebrick",
   },
   {
     name: "teweli / tewei",
-    answer: "blue",
+    answer: "dodgerblue",
   },
   {
     name: "husai",

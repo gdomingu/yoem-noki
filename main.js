@@ -2,6 +2,7 @@ import { animals } from "./animals.js";
 import { colors } from "./colors.js";
 import { shapes } from "./shapes.js";
 import { numbers } from "./numbers.js";
+import { foods } from "./foods.js";
 
 var circle = document.querySelector(".container");
 var genButton = document.querySelector(".genButton");
@@ -26,6 +27,9 @@ const startQuiz = (navSelector) => {
       break;
     case "ka_nananam":
       initQuiz(navSelector.text, shapes);
+      break;
+    case "bwa'ame":
+      initQuiz(navSelector.text, foods);
       break;
     case "hinaikiame":
       initNumberQuiz(navSelector.text, numbers);
