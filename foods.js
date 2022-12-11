@@ -33,7 +33,7 @@ export const foods = [
   },
   {
     name: "wakavaki",
-    url: "https://sonorastar.com/wp-content/uploads/2020/10/wakabaki-2.jpg",
+    url: "https://mexicotravelchannel.com.mx/wp-content/uploads/2021/09/wakabaki.jpg",
   },
   {
     name: "sialia",
