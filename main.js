@@ -18,6 +18,9 @@ navSelectors.forEach((navSelector) => {
 });
 
 const startQuiz = (navSelector) => {
+  circle.style.backgroundImage = "";
+  circle.innerHTML = "";
+  
   switch (navSelector.id) {
     case "hiyokim":
       initColor(navSelector.text);
@@ -96,7 +99,6 @@ function initNumberQuiz(title) {
     answerText.innerHTML = replacement;
     answer.classList.remove("hidden");
     circle.classList.add("anim");
-    circle.style.backgroundImage = "";
     circle.style.backgroundColor = "black";
     circle.style.color = "white";
     circle.style.fontSize = "60px";
@@ -133,7 +135,6 @@ function initQuiz(title, questions) {
       .replaceAll(/[A-Za-z]/g, "_ ");
     answer.classList.remove("hidden");
     circle.classList.add("anim");
-    circle.style.backgroundColor = "";
     circle.style.backgroundImage = `url('${currentQuestion.url}')`;
     circle.style.backgroundSize = "cover";
     circle.style.backgroundPosition = "center";
