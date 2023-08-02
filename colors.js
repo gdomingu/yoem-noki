@@ -13,10 +13,10 @@ export const colors = [
   },
   {
     name: "sawa hewei / naaso",
-    answer: "orange",
+    answer: "darkorange",
   },
   {
-    name: "sikhewei",
+    name: "sik hewei",
     answer: "pink",
   },
   {
@@ -40,7 +40,7 @@ export const colors = [
     answer: "purple",
   },
   {
-    name: "toloko",
+    name: "too oloko",
     answer: "grey",
   },
 ];
