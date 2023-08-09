@@ -12,7 +12,7 @@ export const colors = [
     answer: "saddlebrown",
   },
   {
-    name: "sawa hewei / naaso",
+    name: "sawa hewei",
     answer: "darkorange",
   },
   {
