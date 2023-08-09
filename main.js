@@ -10,12 +10,18 @@ var nextButton = document.querySelector(".nextButton");
 var container = document.querySelector(".fullContainer");
 var answer = document.querySelector(".answer");
 var navSelectors = document.querySelectorAll(".navSelector");
+var showAnswerLink = document.querySelector("#showAnswers")
 navSelectors.forEach((navSelector) => {
   navSelector.onclick = (e) => {
     e.preventDefault();
     startQuiz(navSelector);
   };
 });
+
+showAnswerLink.onclick = (e) => {
+  e.preventDefault();
+  showAnswer = true;
+};
 
 const startQuiz = (navSelector) => {
   circle.style.backgroundImage = "";
@@ -44,6 +50,8 @@ const startQuiz = (navSelector) => {
 
 let answerText = document.querySelector(".answerText");
 let currentPosition = 0;
+let showAnswer = false;
+
 function shuffleArray(array) {
   currentPosition = 0;
   return array.sort((a, b) => 0.5 - Math.random());
@@ -58,10 +66,12 @@ function initColor(title) {
     answerText.innerHTML = "";
     let currentColor = shuffledArray[currentPosition];
     yaqui_name = currentColor.name;
-    let replacement = yaqui_name
-      .replaceAll(/\s/g, "    ")
+    let content = yaqui_name
+    if (!showAnswer) {
+      content = content.replaceAll(/\s/g, "    ")
       .replaceAll(/[A-Za-z]/g, "_ ");
-    answerText.innerHTML = replacement;
+    }
+    answerText.innerHTML = content;
     answer.classList.remove("hidden");
     circle.classList.add("anim");
     circle.style.backgroundImage = "";
