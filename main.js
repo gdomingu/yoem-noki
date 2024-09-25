@@ -43,6 +43,8 @@ const startQuiz = (navSelector) => {
     case "hinaikiame":
       initNumberQuiz(navSelector.text, numbers);
       break;
+    case "have":
+      initHaveQuiz()
     default:
       console.log(`No quiz available.`);
   }
@@ -175,3 +177,32 @@ const handleNextClick = (promptQuestion, shuffledArray) => {
     promptQuestion();
   }
 };
+
+function initHaveQuiz() {
+  document.querySelector(".bodyContainer").style.backgroundImage = "none";
+  document.querySelector(".title").innerHTML = "Have?";
+  const animalContainer = document.createElement("div");
+  circle.style.display = "none";
+  document.querySelector(".controls").style.display = "none";
+  // show all animals in image grid
+  const shuffledArray = shuffleArray(animals);
+  const colContainer = document.querySelector(".colContainer")
+  animalContainer.style.backgroundColor = "white";
+  animalContainer.style.padding = "5px";
+  animalContainer.style.flexDirection = "row";
+  animalContainer.style.display = "flex";
+  animalContainer.style.flexWrap = "wrap";
+  animalContainer.style.gap = "10px"; // Optional: Adds space between flex items
+  // colContainer.style.display = "grid";
+  // colContainer.style.gridTemplateColumns = "repeat(auto-fill, minmax(100px, 1fr))";
+  // colContainer.style.gap = "10px"; // Optional: Adds space between grid items
+  shuffledArray.map((animal) => {
+    console.log("animal", animal);
+    const animalDiv = document.createElement("img");
+    animalDiv.src = animal.url;
+    animalDiv.width = "125";
+    animalDiv.height = "125";
+    animalContainer.appendChild(animalDiv);
+  } );
+  colContainer.appendChild(animalContainer);
+}
