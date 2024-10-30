@@ -1,6 +1,6 @@
 export const foods = [
   {
-    name: "nohim / nokim",
+    name: "nohim",
     url: "https://cdn.pixabay.com/photo/2017/01/18/15/28/tamales-1990080__480.jpg",
   },
   {
