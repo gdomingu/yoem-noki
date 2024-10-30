@@ -31,7 +31,7 @@ const startQuiz = (navSelector) => {
     case "hiyokim":
       initColor(navSelector.text);
       break;
-    case "yolemem":
+    case "yoawam":
       initQuiz(navSelector.text, animals);
       break;
     case "ka_nananam":
