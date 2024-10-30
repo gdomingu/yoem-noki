@@ -3,6 +3,7 @@ import { colors } from "./colors.js";
 import { shapes } from "./shapes.js";
 import { numbers } from "./numbers.js";
 import { foods } from "./foods.js";
+import { feelings } from "./feelings.js";
 
 var circle = document.querySelector(".container");
 var genButton = document.querySelector(".genButton");
@@ -41,10 +42,13 @@ const startQuiz = (navSelector) => {
       initQuiz(navSelector.text, foods);
       break;
     case "hinaikiame":
-      initNumberQuiz(navSelector.text, numbers);
+      initNumberQuiz(navSelector.text);
       break;
     case "have":
       initHaveQuiz()
+    case "ineawame":
+      initFeelingsQuiz(navSelector.text);
+      break;
     default:
       console.log(`No quiz available.`);
   }
@@ -112,6 +116,43 @@ function initNumberQuiz(title) {
     answer.classList.remove("hidden");
     circle.classList.add("anim");
     circle.style.backgroundColor = "black";
+    circle.style.color = "white";
+    circle.style.fontSize = "60px";
+    circle.innerHTML = currentQuestion.circleText
+    setTimeout(() => circle.classList.remove("anim"), 1000);
+  };
+
+  promptQuestion();
+
+  nextButton.onclick = () => handleNextClick(promptQuestion, shuffledArray);
+
+  answer.onclick = function () {
+    answerText.innerHTML = shuffledArray[currentPosition].name;
+    answer.classList.add("hidden");
+  };
+
+  genButton.onclick = () => {
+    shuffleArray(numbers);
+    promptQuestion();
+  };
+}
+
+function initFeelingsQuiz(title) {
+  document.querySelector(".title").innerHTML = title;
+  const shuffledArray = shuffleArray(feelings);
+  let yaqui_name;
+
+  const promptQuestion = () => {
+    answerText.innerHTML = "";
+    let currentQuestion = shuffledArray[currentPosition];
+    yaqui_name = currentQuestion.name;
+    let replacement = yaqui_name
+      .replaceAll(/\s/g, "    ")
+      .replaceAll(/[A-Za-z]/g, "_ ");
+    answerText.innerHTML = replacement;
+    answer.classList.remove("hidden");
+    circle.classList.add("anim");
+    circle.style.backgroundColor = "white";
     circle.style.color = "white";
     circle.style.fontSize = "60px";
     circle.innerHTML = currentQuestion.circleText
